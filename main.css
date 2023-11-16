@@ -1,0 +1,673 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Acme;
+}
+
+:root{
+    --background-color: #0c0c0c;
+    --text-color: #FFFFFF;
+    --font-color: #000000;
+    --header-color: #1F1F1F;
+    --image: url("Dark/Dark Theme.png");
+    --name: url("name.png");
+    --email: url("email.png");
+    --phone: url("phone.png");
+    --message: url("message.png");
+}
+
+.light-theme{
+    --background-color: #EEEEEE;
+    --text-color: #0c0c0c;
+    --font-color: #FFFFFF;
+    --header-color: #FFFFFF;
+    --image: url("Light/Light Theme.png");
+    --name: url("dname.png");
+    --email: url("dmail.png");
+    --phone: url("dphone.png");
+    --message: url("dmessage.png");
+}
+body{
+    background: var(--background-color);
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 650px) {
+    main{
+        padding-top: 70px;
+    }
+    header{
+        width: 370px;
+        height: 80px;
+    }
+    #tlogo{
+        width: 50px;
+        height: 70px;
+        margin: 5px 10px 10px 10px;
+    }
+    .grid{
+        display: block;
+        margin-left: 250px;
+        margin-top: 20px;
+      }
+    .grid.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .grid.active .bar:nth-child(1){
+        transform: translateY(9px) rotate(45deg);
+    }
+    .grid.active .bar:nth-child(3){
+        transform: translateY(-10px) rotate(-45deg);
+    }
+    .list{
+        position: absolute;
+        right: -100%;
+        top: 80px;
+        flex-direction: column;
+        row-gap: 1.1rem;
+        background-color: #CF1C1B;
+        width: 70%;
+        height: 910%;
+        text-align: left;
+        z-index: 100;
+        transition: 0.6s;
+    }
+    .list.active{
+        right: 0;
+    }
+
+    .list li{
+        padding-left: 30px;
+    }
+    #tbtn{
+        margin: 0px 10px 0px 30px;
+        width: 60px;
+    }
+    h1{
+        font-size: 50px;
+        margin-top: 25px;
+    }
+    .intro{
+        font-size: 60px;
+        margin: 0px 0px 0 20px;
+    }
+
+    .intro p{
+        font-size: 25px;
+    }
+    .intro img{
+        width: 350px;
+    }
+
+    .button{
+        background-color: #f92a2a;
+        width: 140px;
+        height: 50px;
+        font-size: 30px;
+        border-radius: 9px;
+        margin-top: 20px;
+    }
+
+    .Adata img{
+        width: 206px;
+        height: 300px;
+        margin-top: 50px;
+    }
+    .Ainfo{
+        margin: 20px 20px 0px 30px;
+    }
+    .Ainfo a{
+        font-size: 40px;
+    }
+    .Ainfo h2{
+        font-size: 20px;
+        font-weight:100;
+        margin-bottom: 20px;
+    }
+    .Ainfo p2 , .Ainfo a2 , .Ainfo a3{
+        font-size: 20px;
+        font-weight:100;
+        line-height: 1.5;
+    }
+
+    .Sdata{
+        margin-top: 30px;
+        width: 369px;
+        height: 1060px;
+    }
+    .box{
+        margin: 10px 0px 30px 20px;
+        border-radius: 15px;
+        width: 320px;
+        height: 920px;
+    }
+    .column{
+        margin: 15px 20px 15px 20px;
+        width: 110px;
+        height: 120px;
+        border-radius: 10px;
+        font-size: 20px;
+    }
+    .row{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .Edata{
+        font-size: 12px;
+    }
+    .box1{
+        border-radius: 10px;
+        margin: 10px;
+        width: 40vh;
+        border-radius: 5px;
+        flex-direction: column;
+    }
+    .box1 img{
+        border-radius: 5px 5px 0 0;
+        width: 40vh;
+    }
+    .btext{
+        text-align: left;
+        font-size: 15px;
+    }
+
+    .Pdata{
+        width: 369px;
+    }
+    .row2{
+        flex-direction: column;
+    }
+    .row2 img{
+        margin: 30px;
+        width: 300px;
+        height: 230px;
+    }
+    .overlayer{
+        width: 300px;
+        height: 130px;
+        left: 30px;
+        right: 0;
+    }
+    .overlayer P{
+        font-size: 12px;
+    }
+    .overlayer button{
+        font-size: 16px;
+        width: 90px;
+        margin: 5px 20px 0px 20px;
+    }
+    h4{
+        font-size: 18px;
+    }
+
+    .box3{
+        margin: 20px 0px 20px 13px;
+        width: 330px;
+    }
+    .box3 img{
+        display: none;
+    }
+    .box3 input[type=text]{
+        width: 30vh;
+        height: 4vh;
+        background-position: 8px 5px;
+        margin: 20px;
+    }
+    .box3 button{
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    main{
+        padding-top: 120px;
+    }
+    header{
+        display: flex;
+        align-items: center;
+        width: 1540px;
+    }
+    #tlogo{
+        margin: 20px 10px 10px 50px;
+    }
+    .grid{
+        display: none;
+    }
+    #tbtn{
+        position:  absolute;
+        top: 20px;
+        left: 1400px;
+    }
+    .list{
+        display: flex;
+        margin: 40px 0px 0 250px;
+    }
+    .list li{
+        padding-left: 80px;
+    }
+    
+    h1{
+        font-size: 80px;
+    }
+    .intro{
+        font-size: 120px;
+        margin: 0px 0 0 120px;
+        width: 670px;
+    }
+    .intro span i{
+        padding: 10px;
+        border: solid 1px #CF1C1B;
+        background-color: #CF1C1B;
+        border-radius: 60px;
+        font-size: 70px;
+        margin: 20px;
+    }
+    
+    .intro p{
+        font-size: 50px;
+        margin-top: 20px;
+    }
+
+    .intro img{
+        width: 500px;
+        bottom: 550px;
+        left: 700px;
+    }
+    .button{
+        width: 290px;
+        height: 110px;
+        font-size: 55px;
+        border-radius: 20px;
+        margin-top: 20px;
+    }
+
+    .Adata{
+        height: 800px;
+    }
+    .Adata img{
+        width: 414px;
+        height: 600px;
+        top: 80px;
+        right: 480px;
+    }
+    .Ainfo{
+        position: relative;
+        left: 650px;
+        bottom: 500px;
+        width: 820px;
+    }
+    .Ainfo a{
+        font-size: 60px;
+        line-height: 1;
+    }
+    .Ainfo p2{
+        font-size: 30px;
+    }
+    .Ainfo a2 , .Ainfo a3{
+        font-size: 20px;
+        line-height: 2;
+    }
+
+    .Sdata{
+        height: 750px;
+    }
+    .box{
+        margin: 10px 100px 30px 250px;
+        border-radius: 15px;
+        width: 1000px;
+        height: 600px;
+    }
+    .column{
+        margin: 25px 30px 25px 30px;
+        width: 190px;
+        height: 140px;
+        border-radius: 10px;
+        font-size: 30px;
+    }
+
+    .Edata{
+        font-size: 30px;
+    }
+    .box1{
+        border-radius: 10px;
+        margin: 20px;
+        width: 1350px;
+        height: 254px;
+    }
+    .box1 img{
+        width: 55vh;
+        border-radius: 10px 0 0 10px;
+    }
+    
+
+    .row2 img{
+        margin: 40px 55px 40px 55px;
+        width: 400px;
+    }
+    .overlayer{
+        width: 400px;
+        height: 180px;
+        left: 55px;
+        right: 0;
+    }
+    .overlayer P{
+        font-size: 22px;
+    }
+    .overlayer button{
+        font-size: 20px;
+        width: 127px;
+        margin: 5px 30px 0px 30px;
+    }
+
+    .box3{
+        margin: 20px 80px 20px 100px;
+        width: 1300px;
+        height: 800px;
+        box-shadow: 8px 8px 10px 0 black;
+    }
+    .box3 input[type=text]{
+        width: 65vh;
+        height: 50px;
+        margin: 20px 50px 20px 150px;
+        background-position: 8px 10px;
+    }
+    .box3 button{
+        margin-right: 80px;
+    }
+}
+header{
+    position: fixed;
+    background: var(--header-color);
+    z-index: 1;
+}
+nav{
+    display: flex;
+    height: 122px;
+}
+button{
+    cursor: pointer;
+}
+.list{
+    display: flex;
+    cursor: pointer;
+}
+.list li{
+    display: inline;
+    color: var(--text-color);
+    font-size: 28px;
+}
+
+.list li a{
+    color: var(--text-color);
+    text-decoration: none;
+    position: relative;
+}
+h1{
+    color: var(--text-color);
+    text-align: center;
+}
+
+h1 a1{
+    color: var(--font-color);
+}
+.list li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: var(--text-color);
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+  }
+  
+  .list li a:hover::after,
+  .list li a:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0.2em, 0);
+  }
+  
+  /* Slide in */
+  .list li a {
+    overflow: hidden;
+  }
+  
+  .list li a::after {
+
+    transform: translate3d(-100%, 0, 0);
+  }
+  
+  .list li a:hover::after,
+  .list li a:focus::after{
+    transform: translate3d(0, 0, 0);
+  }
+  
+  /* Scale from center */
+.bar{
+    display: block;
+    width: 35px;
+    height: 5px;
+    margin: 5px 10px 5px 0px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: var(--text-color);
+}
+.grid{
+    cursor: pointer;
+}
+
+#Home{
+    background-image: var(--image);
+    height: 750px;
+}
+
+.intro{
+    color: var(--text-color);
+}
+.intro img{
+    display: flex;
+    position: relative;
+}
+.button{
+    background-color: #CF1C1B;
+    color: var(--text-color);
+    border: #CF1C1B;
+}
+.button:hover{
+    box-shadow: 4px 4px 10px 0 var(--text-color);
+}
+.intro a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+.ri-facebook-box-fill:hover{
+    border: solid 1px #0866FF;
+    background-color: #0866FF;
+}
+.ri-linkedin-fill:hover{
+    border: solid 1px #0072b1;
+    background-color: #0072b1;
+}
+.ri-github-fill:hover{
+    border: solid 1px black;
+    background-color: black;
+}
+.ri-instagram-line:hover{
+    border: solid 1px #d62976;
+    background-color: #d62976;
+}
+
+.Adata{
+    margin-top: 40px;
+    color: var(--text-color);
+    text-align: center;
+}
+.Adata img{
+    position: relative;
+    filter: grayscale(100%);
+}
+
+.Adata img:hover{
+    filter: grayscale(0%);
+}
+.Ainfo{
+    text-align: left;
+}
+.Ainfo h2{
+    font-size: 26px;
+    font-weight:100;
+    line-height: 2;
+}
+
+.Sdata{
+    border: solid 1px;
+    background-color: #CF1C1B;
+}
+.box{
+    background-color: #f92a2a;
+    border: solid 2px #f92a2a;
+}
+
+.row{
+    display: flex;
+    justify-items: center;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid 2px #790202;
+    background-color: #790202;
+}
+.column a{
+    color: white;
+    margin-bottom: 10px;
+}
+
+.Edata{
+    color: var(--text-color);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.box1{
+    display: flex;
+    border: solid 0px #1F1F1F;
+    background-color: var(--header-color);
+}
+.box1:hover{
+    box-shadow: 8px 8px 10px 0 black;
+}
+.btext{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 20px 10px 10px 20px;
+    align-items: flex-start;
+}
+
+.Pdata{
+    background-color: #CF1C1B;
+}
+
+
+.row2{
+    display: flex;
+}
+.box2{
+    position: relative;
+    width: 50%;
+}
+.row2 img{
+    display: block;
+}
+.overlayer{
+    position: absolute;
+    top: 138px;
+    font-size: 25px ;
+    border-radius: 0 0 10px 10px;
+    bottom: 0;
+    opacity: 0;
+    transition: .5s ease-out;
+    background-color: #FFFFFF;
+}
+.overlayer button{
+    border-radius: 10px;
+    background-color: #1F1F1F;
+    color: #FFFFFF;
+    height: 45px;
+}
+.overlayer P{
+    color: #1F1F1F; 
+    margin:10px 5px 0 30px;
+}
+.overlayer h4{
+    background-color:#FFE600;
+    padding-left: 2vh;
+}
+
+.box2:hover .overlayer{
+    opacity: 1;
+}
+
+#Contact{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.box3{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: solid var(--header-color) 2px;
+    background-color:var(--header-color);
+    border-radius: 20px;
+}
+.box3 img{
+    margin: 60px 0px 0 80px;
+    width: 450px;
+    height: 500px;
+}
+.box3 input[type=text]{
+    font-size: 25px;
+    color: var(--text-color);
+    padding: 12px 0px 12px 65px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    border: solid 2px var(--background-color);
+}
+::placeholder{
+    color: var(--text-color);
+}
+.box3 input[name=name]{
+    background-image: var(--name);
+    background-repeat: no-repeat; 
+}
+.box3 input[name=email]{
+    background-image: var(--email);
+    background-repeat: no-repeat;
+}
+.box3 input[name=phone]{
+    background-image: var(--phone);
+    background-repeat: no-repeat;
+}
+.box3 input[name=message]{
+    background-image: var(--message);
+    background-repeat: no-repeat;
+    padding: 12px 0px 182px 65px;
+}
+.box3 button{
+    align-self: flex-end;
+}
