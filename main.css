@@ -671,3 +671,19 @@ h1 a1{
 .box3 button{
     align-self: flex-end;
 }
+::-webkit-scrollbar{
+    background: var(--header-color);
+    width: .5em;
+}
+::-webkit-scrollbar-track{
+    background: var(--background-color);
+    margin-top: 7.65em;
+
+}
+::-webkit-scrollbar-thumb{
+    background: #424242;
+    border-radius: 1em;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #2d2d2d;
+}
