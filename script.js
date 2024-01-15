@@ -39,7 +39,7 @@ function sendEmail(){
         To : 'sushantsingal18@gmail.com',
         From : document.getElementById("email").value,
         Subject : "New Contact Enquiry Form",
-        Body : "And this is the body"
+        Body : "Name: " + document.getElementById("name").value + "<br>Email: " + document.getElementById("email").value + "<br>Phone: " + document.getElementById("phone").value + "<br>Message: " + document.getElementById("message").value
     }).then(
       message => alert(message)
     );

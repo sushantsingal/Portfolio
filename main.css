@@ -219,7 +219,7 @@ html {
         margin: 20px;
     }
     .box3 button{
-        margin-right: 20px;
+        margin-left: 190px;
         margin-bottom: 10px;
     }
 }
@@ -378,7 +378,7 @@ html {
         background-position: 8px 10px;
     }
     .box3 button{
-        margin-right: 80px;
+        margin-left: 300px;
     }
 }
 header{
