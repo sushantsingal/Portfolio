@@ -30,3 +30,17 @@ btn.addEventListener("click",function(){
 btn.onclick = function(){
     document.body.classList.toggle("light-theme");
 }
+
+function sendEmail(){
+    sendEmail.send({
+        Host : "smtp.gmail.com",
+        Username : "sushantsingal42@gmail.com",
+        Password : "whitedevil@1234",
+        To : 'sushantsingal18@gmail.com',
+        From : document.getElementById("email").value,
+        Subject : "New Contact Enquiry Form",
+        Body : "And this is the body"
+    }).then(
+      message => alert(message)
+    );
+}

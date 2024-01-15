@@ -213,16 +213,17 @@
             <h1> Get In <a1 style="color: #CF1C1B;">Touch</a1></h1>
             <div class="box3">
                 <img src="\media\contact.png">
-                <form>
+                <form onsubmit="sendEmail(); reset(); return false;">
                     <input type="text" name = "name" placeholder="Name"><br>
                     <input type="text" name = "email" placeholder="Email"><br>
                     <input type="text" name = "phone" placeholder="Phone"><br>
                     <input type="text" name = "message" placeholder="Message">
                 </form>
-                <button class="button" type="button"> Submit <i class="ri-send-plane-fill"></i></ class="link"button>
+                <button class="button" type="submit"> Submit <i class="ri-send-plane-fill"></i></ class="link"button>
                 </div>
             </section>
         </main>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
         <script src="script.js"></script>
     </body>
     </html>
