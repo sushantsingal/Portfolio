@@ -32,7 +32,7 @@ btn.onclick = function(){
 }
 
 function sendEmail(){
-    sendEmail.send({
+    Email.send({
         Host : "smtp.gmail.com",
         Username : "sushantsingal42@gmail.com",
         Password : "whitedevil@1234",
